@@ -83,14 +83,12 @@ async function onInput (key: string): Promise<void> {
 
   key = key.toUpperCase()
 
-  if (key === 'CTRL_C') {
-    terminal.grabInput(false)
-    terminal.processExit(0)
-  } else if (key === 'BACKSPACE' && typed.length) typed.splice(-1, 1)
+  if (key === 'CTRL_C' || key === 'Q') process.exit(0)
+  else if (key === 'BACKSPACE' && typed.length) typed.splice(-1, 1)
   else if (key === 'H') {
     const hint = hints[Math.round(Math.random() * (hints.length - 1))]
 
-    terminal.gray('%s\n', hint)
+    terminal.gray('%s', hint)
     listening = false
     await setTimeout(1000)
     listening = true
@@ -124,8 +122,7 @@ async function onInput (key: string): Promise<void> {
       listening = false
       terminal.green('SUCCESS! Sequence constructed!')
       await setTimeout(1000)
-      terminal.processExit(0)
-      return
+      process.exit(0)
     }
   } else if (bases.includes(key)) {
     const used = timesUsed(key)
@@ -141,6 +138,7 @@ async function onInput (key: string): Promise<void> {
   display()
 }
 
+terminal.fullscreen(false)
 display()
 terminal.grabInput(true)
 terminal.on('key', onInput)
