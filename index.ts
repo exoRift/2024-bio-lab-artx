@@ -29,7 +29,7 @@ function shuffle (array: any[]): void {
 }
 
 const sequence: string[] = []
-const acidCount = Math.round((Math.random() * 0) + 3)
+const acidCount = Math.round((Math.random() * 6) + 3)
 const bases: string[] = []
 const hints: string[] = []
 
