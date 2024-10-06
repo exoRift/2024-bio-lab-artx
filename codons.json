@@ -1,0 +1,78 @@
+[
+  {
+    "acid": "Phe",
+    "codes": ["UUU", "UUC"]
+  },
+  {
+    "acid": "Leu",
+    "codes": ["UUA", "UUG", "CUU", "CUC", "CUA", "CUG"]
+  },
+  {
+    "acid": "Ser",
+    "codes": ["UCU", "UCC", "UCA", "UCG", "AGU", "AGC"]
+  },
+  {
+    "acid": "Tyr",
+    "codes": ["UAU", "UAC"]
+  },
+  {
+    "acid": "Cys",
+    "codes": ["UGU", "UGC"]
+  },
+  {
+    "acid": "Trp",
+    "codes": ["UGG"]
+  },
+  {
+    "acid": "Pro",
+    "codes": ["CCU", "CCC", "CCA", "CCG"]
+  },
+  {
+    "acid": "His",
+    "codes": ["CAU", "CAC"]
+  },
+  {
+    "acid": "Gln",
+    "codes": ["CAA", "CAG"]
+  },
+  {
+    "acid": "Arg",
+    "codes": ["CGU", "CGC", "CGA", "CGG", "AGA", "AGG"]
+  },
+  {
+    "acid": "Ile",
+    "codes": ["AUU", "AUC", "AUA"]
+  },
+  {
+    "acid": "Thr",
+    "codes": ["ACU", "ACC", "ACA", "ACG"]
+  },
+  {
+    "acid": "Asn",
+    "codes": ["AAU", "AAC"]
+  },
+  {
+    "acid": "Lys",
+    "codes": ["AAA", "AAG"]
+  },
+  {
+    "acid": "Val",
+    "codes": ["GUU", "GUC", "GUA", "GUG"]
+  },
+  {
+    "acid": "Ala",
+    "codes": ["GGU", "GGC", "GCA", "GCG"]
+  },
+  {
+    "acid": "Asp",
+    "codes": ["GAU", "GAC"]
+  },
+  {
+    "acid": "Glu",
+    "codes": ["GAA", "GAG"]
+  },
+  {
+    "acid": "Gly",
+    "codes": ["GGU", "GGC", "GGA", "GGG"]
+  }
+]
