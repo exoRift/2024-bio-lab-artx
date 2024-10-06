@@ -31,12 +31,15 @@ function shuffle (array: any[]): void {
 const sequence: string[] = []
 const acidCount = Math.round((Math.random() * 0) + 3)
 const bases: string[] = []
+const hints: string[] = []
 
 for (let a = 0; a < acidCount; ++a) {
   const acid = dictionary[Math.round(Math.random() * (dictionary.length - 1))]
 
   sequence.push(acid.acid)
-  bases.push(...acid.codes[Math.round(Math.random() * (acid.codes.length - 1))])
+  const code = acid.codes[Math.round(Math.random() * (acid.codes.length - 1))]
+  hints.push(code)
+  bases.push(...code)
 }
 
 shuffle(bases)
@@ -84,7 +87,14 @@ async function onInput (key: string): Promise<void> {
     terminal.grabInput(false)
     terminal.processExit(0)
   } else if (key === 'BACKSPACE' && typed.length) typed.splice(-1, 1)
-  else if (key === 'ENTER' && typed.length === bases.length) {
+  else if (key === 'H') {
+    const hint = hints[Math.round(Math.random() * (hints.length - 1))]
+
+    terminal.gray('%s\n', hint)
+    listening = false
+    await setTimeout(1000)
+    listening = true
+  } else if (key === 'ENTER' && typed.length === bases.length) {
     const builtSequence: string[] = []
 
     for (let c = 0; c < typed.length; c += 3) {
