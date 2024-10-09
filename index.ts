@@ -1,7 +1,9 @@
-import { terminal } from 'terminal-kit'
+import Terminal from 'terminal-kit'
 import { setTimeout } from 'timers/promises'
 
 import dictionary from './codons.json' with { type: 'json' }
+
+const terminal = Terminal.terminal
 
 const backwardConversions = {
   A: 'T',
